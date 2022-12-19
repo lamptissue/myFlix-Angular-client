@@ -1,0 +1,10 @@
+mat-toolbar  {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: #e7e8ff;
+    button {
+        font-weight:600;
+
+    }
+}

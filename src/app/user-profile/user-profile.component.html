@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+<div class="profile">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title><h1>Profile</h1></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>Update your details:</mat-card-content>
+    <mat-card-content>
+      <form>
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input
+            matInput
+            [(ngModel)]="updatedUser.username"
+            type="text"
+            name="Name"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input
+            matInput
+            [(ngModel)]="updatedUser.email"
+            type="email"
+            name="Email"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            [(ngModel)]="updatedUser.password"
+            type="password"
+            name="Password"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Birthday</mat-label>
+          <input
+            [(ngModel)]="updatedUser.Birthday"
+            matInput
+            type="date"
+            name="Birthday"
+          />
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="updatingUser()">
+        Update
+      </button>
+    </mat-card-actions>
+    <p style="padding: 0 8px">Wanting to leave?</p>
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="deleteProfile()">
+        Delete profile
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
