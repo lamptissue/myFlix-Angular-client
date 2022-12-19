@@ -29,6 +29,7 @@ export class UserProfileComponent implements OnInit{
       console.log(this.user);
       this.updatedUser.username = this.user.username;
       this.updatedUser.email = this.user.email;
+      this.updatedUser.password = this.user.password;
       this.updatedUser.Birthday = this.user.Birthday;
       console.log(this.updatedUser);
       return this.user;
