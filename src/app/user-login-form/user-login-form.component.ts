@@ -20,6 +20,11 @@ export class UserLoginFormComponent implements OnInit {
   
   ngOnInit(): void {
   }
+
+  /**
+   * Sends user information to API and then sends user to movie view
+   * @function loginUser
+   */
       loginUser(): void {
       this.fetchApiData.userLogin(this.userData).subscribe((result) => {
         console.log(result)

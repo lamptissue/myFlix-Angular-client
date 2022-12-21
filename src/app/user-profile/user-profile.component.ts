@@ -23,20 +23,28 @@ export class UserProfileComponent implements OnInit{
     this.getUser();
   }
 
+/**
+ * Gets user info from the API
+ * @returns object with user info
+ * @function getUser
+ */
+
   getUser(): void {
     this.fetchApiData.getUser().subscribe((resp: any) => {
       this.user = resp;
       console.log(this.user);
       this.updatedUser.username = this.user.username;
       this.updatedUser.email = this.user.email;
-      this.updatedUser.password = this.user.password;
       this.updatedUser.Birthday = this.user.Birthday;
       console.log(this.updatedUser);
       return this.user;
     });
   }
 
-
+  /**
+   * updating the user data - returns to welcome screen
+   * @function updatingUser
+   */
   updatingUser(): void {
     this.fetchApiData.updateUser(this.updatedUser).subscribe(
       (result) => {
@@ -68,6 +76,10 @@ export class UserProfileComponent implements OnInit{
     );
   }
 
+    /**
+   * deleting the user - returnings back to welcome screen
+   * @function deleteProfile
+   */
   deleteProfile(): void {
     if (confirm('Are you sure you want to delete your account? This cannnot be undone!')) {
       this.router.navigate(['welcome']).then(() => {
