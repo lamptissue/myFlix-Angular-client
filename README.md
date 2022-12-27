@@ -1,6 +1,6 @@
 # MyFlix Angular
 
-This App uses Angular as the framework and builds the client side on the existing myFlix movie API.
+MyFlix is built using the Angular framework and utilizes the existing myFlix movie API to build the client side. This allows users to access a wide range of movie content and features within the app.
 
 # Technical Requirements
 - Angular
